@@ -1,0 +1,308 @@
+{
+    "feed": {
+      "entries": [
+        {
+          "title":
+            "The mysterious case of the Linux Page Table Isolation patches",
+          "link":
+            "http://pythonsweetness.tumblr.com/post/169166980422/the-mysterious-case-of-the-linux-page-table",
+          "pubDate": "Mon, 1 Jan 2018 16:27:42 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16046636\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T16:27:42.000Z"
+        },
+        {
+          "title": "Zero-Width Characters: Invisibly fingerprinting text",
+          "link":
+            "https://www.zachaysan.com/writing/2017-12-30-zero-width-characters",
+          "pubDate": "Mon, 1 Jan 2018 15:17:59 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16046329\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T15:17:59.000Z"
+        },
+        {
+          "title": "You are listening to San Francisco",
+          "link": "http://youarelistening.to/sanfrancisco",
+          "pubDate": "Mon, 1 Jan 2018 04:33:46 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16044718\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T04:33:46.000Z"
+        },
+        {
+          "title":
+            "Alibaba’s UC Browser is dominating in Asian markets with lower-end smartphones",
+          "link":
+            "https://www.wsj.com/articles/a-browser-youve-never-heard-of-is-dethroning-google-in-asia-1514808002",
+          "pubDate": "Mon, 1 Jan 2018 17:54:42 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16047082\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T17:54:42.000Z"
+        },
+        {
+          "title":
+            "OpenTracing: A vendor-neutral open standard for distributed network tracing",
+          "link": "http://opentracing.io/",
+          "pubDate": "Mon, 1 Jan 2018 16:22:04 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16046614\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T16:22:04.000Z"
+        },
+        {
+          "title": "Copy-on-write friendly Python garbage collection",
+          "link":
+            "https://engineering.instagram.com/copy-on-write-friendly-python-garbage-collection-ad6ed5233ddf",
+          "pubDate": "Mon, 1 Jan 2018 07:46:35 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16045165\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T07:46:35.000Z"
+        },
+        {
+          "title":
+            "A Real-Time Mario Kart AI Using CNNs, Offline Search, and Dagger",
+          "link": "https://github.com/rameshvarun/NeuralKart",
+          "pubDate": "Mon, 1 Jan 2018 14:36:50 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16046183\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T14:36:50.000Z"
+        },
+        {
+          "title": "Massive child porn site is hiding in plain sight",
+          "link":
+            "https://sijmen.ruwhof.net/weblog/1782-massive-child-porn-site-is-hiding-in-plain-sight-and-the-owners-behind-it",
+          "pubDate": "Mon, 1 Jan 2018 21:21:31 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16048120\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T21:21:31.000Z"
+        },
+        {
+          "title":
+            "Why is writing mathematical proofs more fault-proof than writing code? (2011)",
+          "link":
+            "https://cs.stackexchange.com/questions/85327/why-is-writing-down-mathematical-proofs-more-fault-proof-than-writing-computer-c",
+          "pubDate": "Mon, 1 Jan 2018 10:33:41 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16045581\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T10:33:41.000Z"
+        },
+        {
+          "title": "Show your work: The new terms for trust in journalism",
+          "link":
+            "http://pressthink.org/2017/12/show-work-new-terms-trust-journalism/",
+          "pubDate": "Mon, 1 Jan 2018 08:21:48 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16045239\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T08:21:48.000Z"
+        },
+        {
+          "title": "Generating inspirational quotes with Markov chains",
+          "link": "http://www.ramtin.xyz/post/4",
+          "pubDate": "Mon, 1 Jan 2018 13:45:44 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16046019\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T13:45:44.000Z"
+        },
+        {
+          "title": "How Do You Vote? 50M Google Images Give a Clue",
+          "link":
+            "https://nytimes.com/2017/12/31/technology/google-images-voters.html",
+          "pubDate": "Mon, 1 Jan 2018 04:10:04 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16044644\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T04:10:04.000Z"
+        },
+        {
+          "title": "What Could Have Entered the Public Domain on January 1, 2018",
+          "link": "https://law.duke.edu/cspd/publicdomainday/2018/pre-1976/",
+          "pubDate": "Mon, 1 Jan 2018 12:41:05 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16045852\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T12:41:05.000Z"
+        },
+        {
+          "title": "ToySMT – simple SMT solver under 1500 SLOC of pure C",
+          "link": "https://github.com/DennisYurichev/ToySMT",
+          "pubDate": "Mon, 1 Jan 2018 14:56:13 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16046253\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T14:56:13.000Z"
+        },
+        {
+          "title": "The CIA’s Insectothopter",
+          "link":
+            "https://spectrum.ieee.org/tech-history/heroic-failures/meet-the-cias-insectothopter",
+          "pubDate": "Sun, 31 Dec 2017 16:44:24 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16041197\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2017-12-31T16:44:24.000Z"
+        },
+        {
+          "title":
+            "Chemists provide theoretical interpretation to understand chemical reactions",
+          "link":
+            "https://phys.org/news/2017-12-chemists-theoretical-chemical-reactions.html",
+          "pubDate": "Mon, 1 Jan 2018 12:43:57 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16045860\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T12:43:57.000Z"
+        },
+        {
+          "title": "Pen Plotter Art and Algorithms",
+          "link": "https://mattdesl.svbtle.com/pen-plotter-1",
+          "pubDate": "Sun, 31 Dec 2017 21:42:04 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16043159\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2017-12-31T21:42:04.000Z"
+        },
+        {
+          "title": "Testingtechniques in Go",
+          "link": "https://segment.com/blog/5-advanced-testing-techniques-in-go/",
+          "pubDate": "Mon, 1 Jan 2018 05:40:08 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16044873\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T05:40:08.000Z"
+        },
+        {
+          "title":
+            "In the time you spend on social media each year, you could read 200 books",
+          "link":
+            "https://qz.com/895101/in-the-time-you-spend-on-social-media-each-year-you-could-read-200-books/",
+          "pubDate": "Mon, 1 Jan 2018 21:17:20 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16048100\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T21:17:20.000Z"
+        },
+        {
+          "title":
+            "Is abstraction overrated in programming? Chess, interviews and OOP",
+          "link":
+            "https://www.quora.com/Is-abstraction-overrated-in-programming/answer/Matthew-Drescher?&amp;share=1",
+          "pubDate": "Mon, 1 Jan 2018 19:14:24 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16047497\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T19:14:24.000Z"
+        },
+        {
+          "title":
+            "Former Google and Facebook execs are sounding alarms about the power of tech",
+          "link":
+            "https://www.theguardian.com/commentisfree/2018/jan/01/silicon-valley-eating-soul-google-facebook-tech",
+          "pubDate": "Mon, 1 Jan 2018 11:32:00 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16045693\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T11:32:00.000Z"
+        },
+        {
+          "title": "Red Language: Answers to community questions",
+          "link":
+            "http://www.red-lang.org/2018/01/answers-to-community-questions.html",
+          "pubDate": "Mon, 1 Jan 2018 14:47:17 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16046218\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T14:47:17.000Z"
+        },
+        {
+          "title": "Testing Microservices the sane way",
+          "link":
+            "https://medium.com/@copyconstruct/testing-microservices-the-sane-way-9bb31d158c16",
+          "pubDate": "Mon, 1 Jan 2018 04:38:47 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16044732\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T04:38:47.000Z"
+        },
+        {
+          "title":
+            "Show HN: GigaDiff – derisk your release with automated bug prediction",
+          "link": "https://gigadiff.com",
+          "pubDate": "Mon, 1 Jan 2018 15:26:53 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16046365\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T15:26:53.000Z"
+        },
+        {
+          "title": "AI and Deep Learning in 2017 – A Year in Review",
+          "link":
+            "http://www.wildml.com/2017/12/ai-and-deep-learning-in-2017-a-year-in-review/",
+          "pubDate": "Mon, 1 Jan 2018 15:22:27 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16046347\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T15:22:27.000Z"
+        },
+        {
+          "title": "GNU/Linux local username triggers Steam VAC ban",
+          "link": "https://github.com/ValveSoftware/Source-1-Games/issues/2475",
+          "pubDate": "Mon, 1 Jan 2018 13:16:24 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16045946\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T13:16:24.000Z"
+        },
+        {
+          "title": "Ask HN: What’s your favorite talk from 2017?",
+          "link": "https://news.ycombinator.com/item?id=16045859",
+          "pubDate": "Mon, 1 Jan 2018 12:43:04 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16045859\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T12:43:04.000Z"
+        },
+        {
+          "title":
+            "Chirpss – Hear and see people visiting or leaving your website",
+          "link": "http://chirpss.com/?2018",
+          "pubDate": "Mon, 1 Jan 2018 13:16:54 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16045951\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T13:16:54.000Z"
+        },
+        {
+          "title": "IOHIDeous OS X Local Kernel Vulnerability",
+          "link": "https://siguza.github.io/IOHIDeous/",
+          "pubDate": "Sun, 31 Dec 2017 23:17:58 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16043578\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2017-12-31T23:17:58.000Z"
+        },
+        {
+          "title": "Tiny, weird online communities made a comeback in 2017",
+          "link":
+            "https://www.theverge.com/2017/12/28/16795090/internet-community-2017-post-mortem-tumblr-amino-drip-tinyletter",
+          "pubDate": "Mon, 1 Jan 2018 03:46:47 +0000",
+          "content":
+            "<a href=\"https://news.ycombinator.com/item?id=16044568\">Comments</a>",
+          "contentSnippet": "Comments",
+          "isoDate": "2018-01-01T03:46:47.000Z"
+        }
+      ],
+      "title": "Hacker News",
+      "description": "Links for the intellectually curious, ranked by readers.",
+      "link": "https://news.ycombinator.com/"
+    }
+  }
+  
