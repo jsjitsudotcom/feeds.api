@@ -5,7 +5,7 @@ const handleSuccess = body => ({
   headers: {
     "Access-Control-Allow-Origin": "*"
   },
-  body: body
+  body: JSON.stringify(body)
 });
 
 const handleError = ({ message, stack }, statusCode = 400) => ({

@@ -17,6 +17,7 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "sls offline --port 7654"
+    "start": "sls offline --port 7654",
+    "deploy": "sls deploy"
   }
 }
