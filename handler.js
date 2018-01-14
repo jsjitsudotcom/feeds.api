@@ -1,18 +1,18 @@
 const RSS = require("./utils/rss");
 
+const headers = {
+  "Access-Control-Allow-Origin": process.env.ALLOW_ORIGIN
+};
+
 const handleSuccess = body => ({
   statusCode: 200,
-  headers: {
-    "Access-Control-Allow-Origin": "*"
-  },
+  headers,
   body: JSON.stringify(body)
 });
 
 const handleError = ({ message, stack }, statusCode = 400) => ({
   statusCode,
-  headers: {
-    "Access-Control-Allow-Origin": "*"
-  },
+  headers,
   body: JSON.stringify({ message, stack })
 });
 

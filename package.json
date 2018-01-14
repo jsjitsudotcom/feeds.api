@@ -18,6 +18,6 @@
   "scripts": {
     "test": "jest",
     "start": "sls offline --port 7654",
-    "deploy": "sls deploy"
+    "deploy:production": "sls deploy --stage production"
   }
 }
