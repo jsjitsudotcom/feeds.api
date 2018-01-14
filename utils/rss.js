@@ -1,4 +1,3 @@
-const rssParser = require("rss-parser");
 const Promise = require("bluebird");
 const request = require('request');
 
@@ -7,7 +6,7 @@ const RSS = {
     return new Promise((resolve, reject) => {
       return request(url, (err, response) => {
         if (err) return reject(err);
-        return resolve(response);
+        return resolve(response.body);
       })
     });
   },

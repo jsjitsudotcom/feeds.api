@@ -2,11 +2,17 @@ const RSS = require("./utils/rss");
 
 const handleSuccess = body => ({
   statusCode: 200,
-  body: JSON.stringify(body)
+  headers: {
+    "Access-Control-Allow-Origin": "*"
+  },
+  body: body
 });
 
 const handleError = ({ message, stack }, statusCode = 400) => ({
   statusCode,
+  headers: {
+    "Access-Control-Allow-Origin": "*"
+  },
   body: JSON.stringify({ message, stack })
 });
 

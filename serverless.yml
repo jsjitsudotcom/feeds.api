@@ -68,7 +68,7 @@ package:
     - migrations/**
 
 functions:
-  hello:
+  getFeeds:
     handler: handler.feeds
     events:
       - http:
