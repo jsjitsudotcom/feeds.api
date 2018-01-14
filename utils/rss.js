@@ -1,17 +1,24 @@
+const rssParser = require("rss-parser");
 const Promise = require("bluebird");
-const request = require('request');
 
 const RSS = {
   fetchFeeds: /* istanbul ignore next */ url => {
     return new Promise((resolve, reject) => {
-      return request(url, (err, response) => {
+      return rssParser.parseURL(url, (err, parsed) => {
         if (err) return reject(err);
-        return resolve(response.body);
-      })
+        return resolve(parsed);
+      });
     });
   },
   fetchSource(url) {
-    return RSS.fetchFeeds(url);
+    return RSS.fetchFeeds(url).then(rss => {
+      return {
+        feeds: rss.feed.entries,
+        link: rss.feed.link,
+        description: rss.feed.description,
+        title: rss.feed.title
+      };
+    });
   }
 };
 
