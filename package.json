@@ -2,7 +2,8 @@
   "name": "jsjitsu-lambda",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://MarquesDev@bitbucket.org/MarquesDev/jsjitsu-server.git",
+  "repository":
+    "https://MarquesDev@bitbucket.org/MarquesDev/jsjitsu-server.git",
   "author": "Marques Kevin <marques.developpement@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -11,13 +12,35 @@
     "rss-parser": "^2.12.0"
   },
   "devDependencies": {
+    "commitizen": "^2.9.6",
+    "corp-semantic-release": "^6.4.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "ghooks": "^2.0.2",
+    "husky": "^0.14.3",
     "jest": "^22.0.6",
+    "lint-staged": "^6.0.1",
+    "prettier": "^1.10.2",
     "serverless-offline": "^3.16.0",
     "sinon": "^4.1.5"
   },
   "scripts": {
+    "preinstall": "node scripts/preinstall.js",
     "test": "jest",
+    "test:ci": "CI=true jest",
     "start": "sls offline --port 7654",
-    "deploy:production": "sls deploy --stage production"
+    "deploy:production": "sls deploy --stage production",
+    "precommit": "lint-staged",
+    "commit": "git-cz",
+    "do:release": "corp-semantic-release",
+    "release": "npm run deploy:production"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    },
+    "ghooks": {}
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,css,scss}": ["prettier --write", "git add"]
   }
 }
