@@ -1,3 +1,13 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://bitbucket.org/MarquesDev/jsjitsu-server/compare/v1.1.0...v1.1.1) (2018-01-26)
+
+
+### Bug Fixes
+
+* **sentry:** add sentry ([ad1d75f](https://bitbucket.org/MarquesDev/jsjitsu-server/commits/ad1d75f))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://bitbucket.org/MarquesDev/jsjitsu-server/compare/v1.0.0...v1.1.0) (2018-01-26)
 
