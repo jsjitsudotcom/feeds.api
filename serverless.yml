@@ -66,12 +66,11 @@ package:
     - migrations/**
 
 functions:
-  getFeeds:
-    handler: handler.feeds
+  api:
+    handler: src/handler.app
     events:
-      - http:
-          path: feeds
-          method: get
+      - http: 'ANY /'
+      - http: 'ANY {proxy+}'
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
