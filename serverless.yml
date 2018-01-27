@@ -23,7 +23,7 @@ provider:
   stage: ${opt:stage}
   region: eu-west-1
   timeout: 20
-  environment: ${file(stages/${self:provider.stage}.yml)}
+  environment: ${file(stages/production.yml)}
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:

@@ -17,7 +17,6 @@ if (process.env.NODE_ENV === "production")
   }).install();
 if (process.env.NODE_ENV === "production") app.use(Raven.requestHandler());
 
-app.use(Raven.requestHandler());
 app.use(cors());
 app.use(logger("dev"));
 app.use(bodyParser.json());

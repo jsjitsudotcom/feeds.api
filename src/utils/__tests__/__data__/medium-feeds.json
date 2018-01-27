@@ -1,0 +1,141 @@
+{
+  "feeds": [
+    {
+      "creator": "Eric Elliott",
+      "title": "The position is not the point.",
+      "link":
+        "https://medium.com/@_ericelliott/the-position-is-not-the-point-efe12408c33?source=rss-c359511de780------2",
+      "pubDate": "Sat, 27 Jan 2018 01:54:37 GMT",
+      "content:encoded":
+        "<p>The position is not the point. The point is to favor the expression form. I think Python’s if expressions are great.</p><img src=\"https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=efe12408c33\" width=\"1\" height=\"1\">",
+      "dc:creator": "Eric Elliott",
+      "guid": "https://medium.com/p/efe12408c33",
+      "isoDate": "2018-01-27T01:54:37.000Z"
+    },
+    {
+      "creator": "Eric Elliott",
+      "title":
+        "Your point about backtracking would be a good one, but if you stick to one visual way to format…",
+      "link":
+        "https://medium.com/@_ericelliott/your-point-about-backtracking-would-be-a-good-one-but-if-you-stick-to-one-visual-way-to-format-274d2eaf983?source=rss-c359511de780------2",
+      "pubDate": "Thu, 25 Jan 2018 16:18:05 GMT",
+      "content:encoded":
+        "<p>Your point about backtracking would be a good one, but if you stick to one visual way to format ternaries in your practice and project style guides, your brain learns to recognize them for what they are instantly, with no cognitive load, just like you recognize the face of a close friend without thinking about it.</p><p>I have been favoring ternaries over if statements for years, and I spend exactly zero time parsing a ternary as a ternary.</p><p>As for side-effects, unless you always return from every branch, if statements acually do require shared state mutation or side effects. Because if statements do not evaluate to a value, an if statement without a side effect or return is a no-op. It does not have any observable effect. It would be dead code.</p><p>On the other hand, a ternary with side-effects is bad form and should be avoided, and if you attempt to use a statement that does not evaluate to a value as a ternary clause, JavaScript throws an error and alerts you to it.</p><img src=\"https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=274d2eaf983\" width=\"1\" height=\"1\">",
+      "dc:creator": "Eric Elliott",
+      "guid": "https://medium.com/p/274d2eaf983",
+      "categories": ["programming"],
+      "isoDate": "2018-01-25T16:18:05.000Z"
+    },
+    {
+      "creator": "Eric Elliott",
+      "title":
+        "Yep. I wish JavaScript had if expressions. I would always use them.",
+      "link":
+        "https://medium.com/@_ericelliott/yep-i-wish-javascript-had-if-expressions-always-use-them-575b621ca5d1?source=rss-c359511de780------2",
+      "pubDate": "Thu, 25 Jan 2018 15:16:50 GMT",
+      "content:encoded":
+        "<p>Yep. I wish JavaScript had if expressions. I would always use them.</p><img src=\"https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=575b621ca5d1\" width=\"1\" height=\"1\">",
+      "dc:creator": "Eric Elliott",
+      "guid": "https://medium.com/p/575b621ca5d1",
+      "isoDate": "2018-01-25T15:16:50.000Z"
+    },
+    {
+      "creator": "Eric Elliott",
+      "title": "Nested Ternaries are Great",
+      "link":
+        "https://medium.com/javascript-scene/nested-ternaries-are-great-361bddd0f340?source=rss-c359511de780------2",
+      "pubDate": "Thu, 25 Jan 2018 03:08:04 GMT",
+      "content:encoded":
+        "<figure><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/1*uVpU7iruzXafhU2VLeH4lw.jpeg\" /><figcaption>Smoke Art Cubes to Smoke — MattysFlicks — (CC BY 2.0)</figcaption></figure><blockquote>Note: This is part of the “Composing Software” series on learning functional programming and compositional software techniques in JavaScript ES6+ from the ground up. Stay tuned. There’s a lot more of this to come!<br><a href=\"https://medium.com/javascript-scene/the-hidden-treasures-of-object-composition-60cd89480381\">&lt; Previous</a> | <a href=\"https://medium.com/javascript-scene/composing-software-an-introduction-27b72500d6ea\">&lt;&lt; Start over at Part 1</a></blockquote><p>Conventional wisdom would have you believe that nested ternaries are unreadable, and should be avoided.</p><blockquote>Conventional wisdom is sometimes unwise.</blockquote><p>The truth is, <em>ternaries are usually much simpler than if statements.</em> People believe the reverse for two reasons:</p><ol><li>They’re more familiar with if statements. Familiarity bias can lead us to believe things that aren’t true, even when we’re presented with evidence to the contrary.</li><li>People try to use ternary statements as if they’re if statements. That doesn’t work, because ternary expressions are <em>expressions, not statements.</em></li></ol><p>Before we get into the details, let’s define a ternary expression:</p><p>A ternary expression is a conditional expression that evaluates to a value. It consists of a conditional, a truthy clause (the value to produce if the conditional evaluates to a truthy value), and a falsy clause (the value to produce if the conditional evaluates to a falsy value).</p><p>They look like this:</p><pre>(conditional)<br>  ? truthyClause<br>  : falsyClause</pre><h3>Expressions vs Statements</h3><p>Several programming languages (including Smalltalk, Haskell, and most functional programming languages) don’t have if statements at all. They have if <em>expressions</em>, instead.</p><p>An if expression is a conditional expression that evaluates to a value. It consists of a conditional, a truthy clause (the value to produce if the conditional evaluates to a truthy value), and a falsy clause (the value to produce if the conditional evaluates to a falsy value).</p><p>Does that look familiar? Most functional programming languages use <em>ternary expressions</em> for their if keyword. Why?</p><p>An expression is a chunk of code that evaluates to a single value.</p><p>A statement is a chunk of code that may not evaluate to a value at all. In JavaScript if statements <em>don’t evaluate to values</em>. In order for an if statement in JavaScript to do anything useful, it <em>must</em> cause a side-effect or return a value from the containing function.</p><p>In functional programming, we tend to <em>avoid</em> mutations and other side-effects. Since if in JavaScript naturally <em>affords</em> mutation and side effects, many functional programmers reach for ternaries instead — nested or not. Including me.</p><p>Thinking in terms of ternary expressions is a bit different from thinking in terms of if statements, but if you practice a lot for a couple of weeks, you’ll start to gravitate towards ternaries naturally, if only because it’s less typing, as you’ll soon see.</p><h3>Familiarity Bias</h3><p>The common claim I hear is that nested ternary expressions are “hard to read”. Let’s shatter that myth with some code examples:</p><pre>const withIf = ({<br>  conditionA, conditionB<br>}) =&gt; {<br>  if (conditionA) {<br>    if (conditionB) {<br>      return valueA;<br>    }<br>    return valueB;<br>  }<br>  return valueC;<br>};</pre><p>Note that in this version, there are nesting conditions and braces visually separating the truthy clause from the falsy clauses, making them feel very disconnected. This is fairly simple logic, but it’s a little taxing to parse.</p><p>Here’s the same logic written in ternary expression form:</p><pre>const withTernary = ({<br>  conditionA, conditionB<br>}) =&gt; (<br>  (!conditionA)<br>    ? valueC<br>    : (conditionB)<br>    ? valueA<br>    : valueB<br>);</pre><p>There are a few interesting points to be made here:</p><h3>Daisy Chaining vs Nesting</h3><p>First, we’ve flattened out the nesting. “Nested” ternaries is a bit of a misnomer, because ternaries are easy to write in a straight line, you never need to nest them with indent levels at all. They simply read top to bottom in a straight line, returning a value as soon as they hit a truthy condition or the fallback.</p><p>If you write ternaries properly, there is no nesting to parse. It’s pretty hard to get lost following a straight line.</p><p>We should probably call them “chained ternaries” instead.</p><p>The second thing I want to point out is that, in order to simplify this straight line chaining, I switched up the order a little bit: If you get to the end of a ternary expression and find you need to write two colon clauses (:), grab the last clause, move it to the top, and reverse the logic of the first conditional to simplify parsing the ternary. No more confusion!</p><p>It’s worth noting that we can use the same trick to simplify the if statement form:</p><pre>const withIf = ({<br>  conditionA, conditionB<br>}) =&gt; {<br>  if (!conditionA) return valueC;<br>  if (conditionB) {<br>    return valueA;<br>  }<br>  return valueB;<br>};</pre><p>That’s better, but it still visually breaks up the related clauses for conditionB, which can cause confusion. I&#39;ve seen that problem lead to logic bugs during code maintenance. Even with the logic flattened, this version is still more cluttered than the ternary version.</p><h3>Syntax Clutter</h3><p>The if version contains a bit more noise: the if keyword vs ?, return to force the statement to return a value, extra semicolons, extra braces, etc... Unlike this example, most if statements also mutate some outside state, which further adds to the extra code and complexity.</p><p>Extra code is bad for a few important reasons. I’ve said all this before but it’s worth repeating until every developer has it burned into their brain:</p><h4>Working Memory</h4><p>The average human brain has only a few shared resources for discrete <a href=\"https://www.nature.com/articles/nn.3655\">quanta in working memory</a>, and each variable potentially consumes one of those quanta. As you add more variables, your ability to accurately recall the meaning of each variable is diminished. Working memory models typically involve 4–7 discrete quanta. Above those numbers, error rates dramatically increase.</p><p>When we force mutation or side-effects with if statements as opposed to ternaries, that often entails adding variables to the mix that don’t need to be there.</p><h4>Signal to Noise Ratio</h4><p>Concise code also improves the signal-to-noise ratio of your code. It’s like listening to a radio — when the radio is not tuned properly to the station, you get a lot of interfering noise, and it’s harder to hear the music. When you tune it to the correct station, the noise goes away, and you get a stronger musical signal.</p><p>Code is the same way. More concise code expression leads to enhanced comprehension. Some code gives us useful information, and some code just takes up space. If you can reduce the amount of code you use without reducing the meaning that gets transmitted, you’ll make the code easier to parse and understand for other people who need to read it.</p><h4>Surface Area for Bugs</h4><p>Take a look at the before and after functions. It looks like the function went on a diet and lost a ton of weight. That’s important because extra code means extra surface area for bugs to hide in, which means more bugs will hide in it.</p><blockquote><em>Less code = less surface area for bugs = fewer bugs.</em></blockquote><h3>Side Effects and Shared Mutable State</h3><p>Many if statements do more than evaluate to a value. They also cause side-effects, or mutate variables, so you can’t see the complete effect of the if statement without also knowing the impact of those side effects and the full history of everything else that touches its shared mutable state.</p><p>Restricting yourself to returning a value forces discipline: severing dependencies so your program is easier to understand, debug, refactor, and maintain.</p><p>This is actually my favorite benefit of ternary expressions:</p><blockquote><em>Using ternaries will make you a better developer.</em></blockquote><h3>Conclusion</h3><p>Since all ternaries are easy to arrange in a straight line, top to bottom, calling them “nested ternaries” is a bit of a misnomer. Let’s call them “chained ternaries”, instead.</p><p>Chained ternaries have several advantages over if statements:</p><ul><li>It’s always easy to write them so that they read in a straight line, top to bottom. If you can follow a straight line, you can read a chained ternary.</li><li>Ternaries reduce syntax clutter. Less code = less surface area for bugs = fewer bugs.</li><li>Ternaries don’t need temporary variables, reducing load on working memory.</li><li>Ternaries have a better signal-to-noise ratio.</li><li>If statements encourage side effects and mutation. Ternaries encourage pure code.</li><li>Pure code decouples our expressions and functions from each other, so ternaries train us to be better developers.</li></ul><h3>Learn More at EricElliottJS.com</h3><p>Video lessons on functional programming are available for members of EricElliottJS.com. If you’re not a member, <a href=\"https://ericelliottjs.com/\">sign up today</a>.</p><figure><a href=\"https://ericelliottjs.com/product/lifetime-access-pass/\"><img alt=\"\" src=\"https://cdn-images-1.medium.com/max/1024/1*3njisYUeHOdyLCGZ8czt_w.jpeg\" /></a></figure><p><strong><em>Eric Elliott</em></strong><em> is the author of </em><a href=\"http://pjabook.com\"><em>“Programming JavaScript Applications”</em></a><em> (O’Reilly), and </em><a href=\"http://ericelliottjs.com/product/lifetime-access-pass/\"><em>“Learn JavaScript with Eric Elliott”</em></a><em>. He has contributed to software experiences for </em><strong><em>Adobe Systems</em></strong><em>, </em><strong><em>Zumba Fitness</em></strong><em>, </em><strong><em>The Wall Street Journal</em></strong><em>, </em><strong><em>ESPN</em></strong><em>, </em><strong><em>BBC</em></strong><em>, and top recording artists including </em><strong><em>Usher</em></strong><em>, </em><strong><em>Frank Ocean</em></strong><em>, </em><strong><em>Metallica</em></strong><em>, and many more.</em></p><p><em>He works remote from anywhere with the most beautiful woman in the world.</em></p><img src=\"https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=361bddd0f340\" width=\"1\" height=\"1\"><hr><p><a href=\"https://medium.com/javascript-scene/nested-ternaries-are-great-361bddd0f340\">Nested Ternaries are Great</a> was originally published in <a href=\"https://medium.com/javascript-scene\">JavaScript Scene</a> on Medium, where people are continuing the conversation by highlighting and responding to this story.</p>",
+      "dc:creator": "Eric Elliott",
+      "guid": "https://medium.com/p/361bddd0f340",
+      "categories": [
+        "javascript",
+        "technology",
+        "composing-software",
+        "functional-programming"
+      ],
+      "isoDate": "2018-01-25T03:08:04.000Z"
+    },
+    {
+      "creator": "Eric Elliott",
+      "title":
+        "No, because if it refers to any non-primitive value, you can mutate its props by changing just one…",
+      "link":
+        "https://medium.com/@_ericelliott/no-because-if-it-refers-to-any-non-primitive-value-you-can-mutate-its-props-by-changing-just-one-fd5a0fcb1b3b?source=rss-c359511de780------2",
+      "pubDate": "Tue, 23 Jan 2018 12:06:27 GMT",
+      "content:encoded":
+        "<p>No, because if it refers to any non-primitive value, you can mutate its props by changing just one property or the value of an array index, etc…</p><img src=\"https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=fd5a0fcb1b3b\" width=\"1\" height=\"1\">",
+      "dc:creator": "Eric Elliott",
+      "guid": "https://medium.com/p/fd5a0fcb1b3b",
+      "isoDate": "2018-01-23T12:06:27.000Z"
+    },
+    {
+      "creator": "Eric Elliott",
+      "title":
+        "Yep. Elm influenced how I think about modern app architecture. Great stuff!",
+      "link":
+        "https://medium.com/@_ericelliott/yep-elm-influenced-how-i-think-about-modern-app-architecture-great-stuff-9eb1a1579775?source=rss-c359511de780------2",
+      "pubDate": "Mon, 22 Jan 2018 06:20:28 GMT",
+      "content:encoded":
+        "<p>Yep. Elm influenced how I think about modern app architecture. Great stuff!</p><img src=\"https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=9eb1a1579775\" width=\"1\" height=\"1\">",
+      "dc:creator": "Eric Elliott",
+      "guid": "https://medium.com/p/9eb1a1579775",
+      "isoDate": "2018-01-22T06:20:28.000Z"
+    },
+    {
+      "creator": "Eric Elliott",
+      "title": "I have had this conversation before.",
+      "link":
+        "https://medium.com/@_ericelliott/i-have-had-this-conversation-before-9f6e23180646?source=rss-c359511de780------2",
+      "pubDate": "Sun, 21 Jan 2018 16:56:17 GMT",
+      "content:encoded":
+        "<p>I have had this conversation before.</p><p>Please read: <a href=\"https://medium.com/@_ericelliott/you-appear-to-be-arguing-out-of-context-against-a-claim-i-am-not-making-f2888608f50b\">https://medium.com/@_ericelliott/you-appear-to-be-arguing-out-of-context-against-a-claim-i-am-not-making-f2888608f50b</a></p><img src=\"https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=9f6e23180646\" width=\"1\" height=\"1\">",
+      "dc:creator": "Eric Elliott",
+      "guid": "https://medium.com/p/9f6e23180646",
+      "isoDate": "2018-01-21T16:56:17.000Z"
+    },
+    {
+      "creator": "Eric Elliott",
+      "title":
+        "Yes. But M(M(a)) => M(a) is still a member of M(x) => x because x can represent M(a), and does in…",
+      "link":
+        "https://medium.com/@_ericelliott/yes-but-m-x-x-is-still-a-member-of-m-m-a-m-a-because-x-can-represent-m-a-and-does-in-1a1ac4abb9cd?source=rss-c359511de780------2",
+      "pubDate": "Sat, 20 Jan 2018 18:05:10 GMT",
+      "content:encoded":
+        "<p>Yes. But M(M(a)) =&gt; M(a) is still a member of M(x) =&gt; x because <strong>x can represent M(a), and does in this context.</strong></p><p>Additionally, sometimes the computational context of a monad is a no-op, meaning that in some monads, perfectly valid to simply return the value from join.</p><p>When we do so, we make the implicit assumption that the value is already a monad -- however, it is not the responsibility of join to guarantee that in JavaScript.</p><p>The math proofs in code were already supplied in this comment thread. Feel free to read them and prove these things to yourself.</p><img src=\"https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=1a1ac4abb9cd\" width=\"1\" height=\"1\">",
+      "dc:creator": "Eric Elliott",
+      "guid": "https://medium.com/p/1a1ac4abb9cd",
+      "categories": ["functional-programming"],
+      "isoDate": "2018-01-20T18:05:10.000Z"
+    },
+    {
+      "creator": "Eric Elliott",
+      "title":
+        "The difference is that timing dependency problems using come from async operations… async timing is…",
+      "link":
+        "https://medium.com/@_ericelliott/the-difference-is-that-timing-dependency-problems-using-come-from-async-operations-async-timing-is-49fa6f55f6f1?source=rss-c359511de780------2",
+      "pubDate": "Sat, 20 Jan 2018 01:57:32 GMT",
+      "content:encoded":
+        "<p>The difference is that timing dependency problems using come from async operations… async timing is not going to impact your pre-defined compositions.</p><img src=\"https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=49fa6f55f6f1\" width=\"1\" height=\"1\">",
+      "dc:creator": "Eric Elliott",
+      "guid": "https://medium.com/p/49fa6f55f6f1",
+      "isoDate": "2018-01-20T01:57:32.000Z"
+    },
+    {
+      "creator": "Eric Elliott",
+      "title": "I did that, but I used metrics that actually matter.",
+      "link":
+        "https://medium.com/@_ericelliott/i-did-that-but-i-used-metrics-that-actually-matter-f910f8255aed?source=rss-c359511de780------2",
+      "pubDate": "Sat, 20 Jan 2018 01:56:21 GMT",
+      "content:encoded":
+        "<blockquote>If you’re going to crunch data you should get your points from multiple sources and take into account multiple biases THEN make a meta-analysis.</blockquote><p>I did that, but <em>I used metrics that actually matter.</em> Not GitHub stars, but npm downloads, and job listings — much more reliable data points for actual use in the job market. GitHub stars just mean, “oh, this looks neat!”, not “I’m actually using this for real productivity.”</p><p>I have built small apps with all of the major frameworks (and a few very large apps in both Angular 2+ and React).</p><p>Building only small apps gives you a warped sense, because small apps don’t give you a chance to bump up against a framework’s rough edges.</p><p>Also, that would be <a href=\"https://medium.com/javascript-scene/angular-2-vs-react-the-ultimate-dance-off-60e7dfbc379c\">a completely different kind of article</a>.</p><img src=\"https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=f910f8255aed\" width=\"1\" height=\"1\">",
+      "dc:creator": "Eric Elliott",
+      "guid": "https://medium.com/p/f910f8255aed",
+      "isoDate": "2018-01-20T01:56:21.000Z"
+    }
+  ],
+  "link": "https://medium.com/@_ericelliott?source=rss-c359511de780------2",
+  "description": "Stories by Eric Elliott on Medium",
+  "title": "Stories by Eric Elliott on Medium"
+}
