@@ -1,3 +1,13 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://bitbucket.org/MarquesDev/jsjitsu-server/compare/v1.1.1...v1.2.0) (2018-01-27)
+
+
+### Features
+
+* **sls:** add sls versioning and add medium ([3c9e079](https://bitbucket.org/MarquesDev/jsjitsu-server/commits/3c9e079))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://bitbucket.org/MarquesDev/jsjitsu-server/compare/v1.1.0...v1.1.1) (2018-01-26)
 
