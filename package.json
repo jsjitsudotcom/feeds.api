@@ -44,8 +44,7 @@
     "precommit": "lint-staged",
     "commit": "git-cz",
     "do:release": "corp-semantic-release",
-    "release":
-      "npm run test:ci && npm run do:release && npm run deploy:production"
+    "release": "npm run test:ci && npm run do:release && npm run deploy"
   },
   "config": {
     "commitizen": {

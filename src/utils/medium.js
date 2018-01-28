@@ -7,6 +7,8 @@ const ENDPOINTS = [
   "https://medium.com/feed/@_ericelliott"
 ];
 
+const getSevenDaysPast = () => new Date(Date.now() - 60 * 60 * 24 * 7 * 1000);
+
 module.exports = {
   fetch(endpoint) {
     return RSS.fetchSource(endpoint);
@@ -16,11 +18,22 @@ module.exports = {
       .then(this.flattenFeeds)
       .then(this.uniqById)
       .then(this.sortByDate)
+      .then(this.filterByDate)
       .then(R.take(30));
   },
   uniqById: R.uniqBy(R.prop("guid")),
   sortByDate: R.sortWith([R.descend(R.prop("isoDate"))]),
+  filterByDate(feeds) {
+    const isDateMoreThan7Days = R.pipe(
+      R.prop("isoDate"),
+      date => new Date(date),
+      R.gte(R.__, getSevenDaysPast())
+    );
+
+    return R.filter(isDateMoreThan7Days, feeds);
+  },
   flattenFeeds(feeds) {
-    return R.pipe(R.map(R.prop("feeds")), R.flatten)(feeds);
+    const getFeeds = R.map(R.prop("feeds"));
+    return R.pipe(getFeeds, R.flatten)(feeds);
   }
 };
