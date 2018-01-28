@@ -1,3 +1,13 @@
+<a name="1.2.1"></a>
+## [1.2.1](https://bitbucket.org/MarquesDev/jsjitsu-server/compare/v1.2.0...v1.2.1) (2018-01-28)
+
+
+### Bug Fixes
+
+* **medium filter date:** suppression des articles qui datent de plus de sept jours ([fd62ba0](https://bitbucket.org/MarquesDev/jsjitsu-server/commits/fd62ba0))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://bitbucket.org/MarquesDev/jsjitsu-server/compare/v1.1.1...v1.2.0) (2018-01-27)
 
