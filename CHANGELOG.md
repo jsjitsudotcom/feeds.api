@@ -1,3 +1,13 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://bitbucket.org/MarquesDev/jsjitsu-server/compare/v1.2.1...v1.3.0) (2018-03-13)
+
+
+### Features
+
+* **articles:** ajout d'une route permettant d'extraire le texte d'un article depuis une url ([7994df6](https://bitbucket.org/MarquesDev/jsjitsu-server/commits/7994df6))
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://bitbucket.org/MarquesDev/jsjitsu-server/compare/v1.2.0...v1.2.1) (2018-01-28)
 
