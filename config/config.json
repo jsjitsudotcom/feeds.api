@@ -6,14 +6,18 @@
     "host": "127.0.0.1",
     "dialect": "postgres",
     "port": 5432,
-    "seederStorage": "sequelize"
+    "seederStorage": "sequelize",
+    "operatorsAliases": false
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
+    "username": "postgres",
+    "password": "root",
+    "database": "postgres",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres",
+    "port": 5432,
+    "seederStorage": "sequelize",
+    "operatorsAliases": false
   },
   "production": {
     "username": "root",

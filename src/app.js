@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use("/", index);
 
 app.use(function(req, res, next) {
-  return res.status(400).json({ message, stack });
+  return res.status(404).json({ message: "Not found" });
 });
 
 if (process.env.NODE_ENV === "production") app.use(Raven.errorHandler());
