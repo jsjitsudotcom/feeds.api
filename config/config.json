@@ -4,7 +4,9 @@
     "password": "root",
     "database": "postgres",
     "host": "127.0.0.1",
-    "dialect": "pg"
+    "dialect": "postgres",
+    "port": 5432,
+    "seederStorage": "sequelize"
   },
   "test": {
     "username": "root",
