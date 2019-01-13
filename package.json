@@ -20,6 +20,7 @@
     "read-art": "^0.5.4",
     "request": "^2.83.0",
     "rss-parser": "^2.12.0",
+    "sequelize": "^4.42.0",
     "serverless-http": "^1.5.3"
   },
   "devDependencies": {
@@ -33,6 +34,7 @@
     "lint-staged": "^6.0.1",
     "nodemon": "^1.17.1",
     "prettier": "^1.10.2",
+    "sequelize-cli": "^5.4.0",
     "serverless-offline": "^3.16.0",
     "sinon": "^4.1.5"
   },
