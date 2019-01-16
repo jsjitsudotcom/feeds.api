@@ -1,29 +1,7 @@
 const supertest = require("supertest");
 const app = require("../../../app");
 const user = require("../../../models/user");
-
-const testSchema = (schemaKeys, response) => {
-  const responseKeys = Object.keys(response);
-  responseKeys.forEach(key => {
-    if (!schemaKeys.includes(key))
-      throw new Error(`
-    The schema does not contains ${key} attribute
-    `);
-  });
-};
-
-const mockDbResponse = (schema, response) => {
-  return jest.fn(() => {
-    if (response === null) return Promise.resolve(null);
-    if (Array.isArray(response)) {
-      response.forEach(response => testSchema(schema, response));
-      return Promise.resolve(response);
-    } else {
-      testSchema(schema, response);
-      return Promise.resolve(response);
-    }
-  });
-};
+const mockDbResponse = require("../../../utils/mock-db-response");
 
 describe("/users test suite", () => {
   it("Should return an error if the email is not provided", () => {

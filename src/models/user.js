@@ -9,10 +9,7 @@ const findUserByEmailAndPassword = ({ email, password }) => {
   });
 };
 
-findUserByEmailAndPasswordSchema = () => {
-  const userAttributes = Object.keys(db.user.tableAttributes);
-  return [].concat(userAttributes);
-};
+findUserByEmailAndPasswordSchema = () => db.user.tableAttributes;
 
 module.exports = {
   findUserByEmailAndPassword,
