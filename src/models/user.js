@@ -1,15 +1,20 @@
 const db = require("../../models");
 
 const findUserByEmailAndPassword = ({ email, password }) => {
-  return db.user.findOne({
-    where: {
-      email,
-      password
-    }
-  });
+  return db.user
+    .findOne({
+      where: {
+        email,
+        password
+      }
+    })
+    .then(response => {
+      if (response) return response.get({ plain: true });
+      return response;
+    });
 };
 
-findUserByEmailAndPasswordSchema = () => db.user.tableAttributes;
+const findUserByEmailAndPasswordSchema = () => db.user.tableAttributes;
 
 module.exports = {
   findUserByEmailAndPassword,

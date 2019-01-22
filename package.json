@@ -44,6 +44,8 @@
   "scripts": {
     "preinstall": "node scripts/preinstall.js",
     "test": "jest --watch",
+    "test:int": "jest --watch int.test.js",
+    "test:unit": "jest --watch unit.test.js",
     "test:ci": "CI=true jest --coverage",
     "debug": "DEBUG=app:* PORT=7654 nodemon src/bin/www",
     "debug:production": "NODE_ENV=production npm run debug",
