@@ -2,13 +2,14 @@ const supertest = require("supertest");
 const app = require("../../../app");
 const findUserByEmailAndPassword = require("../../../models/user/findUserByEmailAndPassword");
 const mockDbResponse = require("../../../utils/for-tests/mock-db-response");
+const jwt = require("../../../utils/jwt");
 
-describe.only("/users test suite", () => {
+describe("/auth test suite", () => {
   it("Should return an error if the email is not provided", () => {
     const password = "supersecret";
 
     return supertest(app)
-      .post("/users")
+      .post("/auth")
       .send({ password })
       .expect(400);
   });
@@ -17,7 +18,7 @@ describe.only("/users test suite", () => {
     const email = "supersecret";
 
     return supertest(app)
-      .post("/users")
+      .post("/auth")
       .send({ email })
       .expect(400);
   });
@@ -35,10 +36,10 @@ describe.only("/users test suite", () => {
     });
 
     return supertest(app)
-      .post("/users")
+      .post("/auth")
       .send({ email, password })
       .then(({ body }) => {
-        expect(body).toEqual({ id, email });
+        expect(body.token).not.toBeNull();
       });
   });
 
@@ -50,7 +51,7 @@ describe.only("/users test suite", () => {
     findUserByEmailAndPassword.execute = mockDbResponse(schema, null);
 
     return supertest(app)
-      .post("/users")
+      .post("/auth")
       .send({ email, password })
       .expect(400)
       .then(({ body }) => {

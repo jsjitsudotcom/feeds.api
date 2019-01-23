@@ -9,8 +9,6 @@ describe("findUserByEmailAndPassword integration test suite", () => {
 
     return findUserByEmailAndPassword
       .execute({ email, password })
-      .then(response => {
-        return testSchema(schema, response);
-      });
+      .then(response => testSchema(schema, response));
   });
 });

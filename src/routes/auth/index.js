@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const findUserByEmailAndPassword = require("../../models/user/findUserByEmailAndPassword");
+const jwt = require("../../utils/jwt");
 
 const hasEmail = (req, res, next) => {
   if (!req.body.email)
@@ -32,9 +33,12 @@ router.post("/", hasEmail, hasPassword, (req, res, next) => {
         return res
           .status(400)
           .json({ message: "The credentials are incorrect" });
+
       const { id, email } = user;
 
-      return res.json({ id, email });
+      const token = jwt.generate({ id, email });
+
+      return res.json({ token });
     })
     .catch(next);
 });
