@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-router.use("/medium", require("./medium"));
-router.use("/echojs", require("./echojs"));
+router.use("/", require("./get.feeds"));
 
 module.exports = router;

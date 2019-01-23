@@ -1,9 +1,9 @@
 const supertest = require("supertest");
 const app = require("../../../app");
-const user = require("../../../models/user");
-const mockDbResponse = require("../../../utils/mock-db-response");
+const findUserByEmailAndPassword = require("../../../models/user/findUserByEmailAndPassword");
+const mockDbResponse = require("../../../utils/for-tests/mock-db-response");
 
-describe("/users test suite", () => {
+describe.only("/users test suite", () => {
   it("Should return an error if the email is not provided", () => {
     const password = "supersecret";
 
@@ -26,9 +26,9 @@ describe("/users test suite", () => {
     const id = "23456";
     const email = "jsjitsu@gmail.com";
     const password = "supersecret";
-    const schema = user.findUserByEmailAndPasswordSchema();
+    const schema = findUserByEmailAndPassword.getSchema();
 
-    user.findUserByEmailAndPassword = mockDbResponse(schema, {
+    findUserByEmailAndPassword.execute = mockDbResponse(schema, {
       id,
       email,
       password
@@ -45,9 +45,9 @@ describe("/users test suite", () => {
   it("Should return an error if the credentials are incorrect", () => {
     const email = "jsjitsu@gmail.com";
     const password = "supersecret";
-    const schema = user.findUserByEmailAndPasswordSchema();
+    const schema = findUserByEmailAndPassword.getSchema();
 
-    user.findUserByEmailAndPassword = mockDbResponse(schema, null);
+    findUserByEmailAndPassword.execute = mockDbResponse(schema, null);
 
     return supertest(app)
       .post("/users")

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const user = require("../../models/user");
+const findUserByEmailAndPassword = require("../../models/user/findUserByEmailAndPassword");
 
 const hasEmail = (req, res, next) => {
   if (!req.body.email)
@@ -25,8 +25,8 @@ const hasPassword = (req, res, next) => {
 router.post("/", hasEmail, hasPassword, (req, res, next) => {
   const { email, password } = req.body;
 
-  return user
-    .findUserByEmailAndPassword({ email, password })
+  return findUserByEmailAndPassword
+    .execute({ email, password })
     .then(user => {
       if (!user)
         return res

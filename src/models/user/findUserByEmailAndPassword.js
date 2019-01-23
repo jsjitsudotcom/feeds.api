@@ -1,4 +1,5 @@
-const db = require("../../models");
+const db = require("../../../models");
+const Model = require("../model");
 
 const findUserByEmailAndPassword = ({ email, password }) => {
   return db.user
@@ -16,7 +17,7 @@ const findUserByEmailAndPassword = ({ email, password }) => {
 
 const findUserByEmailAndPasswordSchema = () => db.user.tableAttributes;
 
-module.exports = {
+module.exports = Model(
   findUserByEmailAndPassword,
   findUserByEmailAndPasswordSchema
-};
+);

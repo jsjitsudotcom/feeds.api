@@ -17,7 +17,8 @@
     "dialect": "postgres",
     "port": 5432,
     "seederStorage": "sequelize",
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "logging": false
   },
   "production": {
     "username": "root",
