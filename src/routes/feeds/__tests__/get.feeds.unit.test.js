@@ -3,7 +3,7 @@ const app = require("../../../app");
 const findDefaultFeeds = require("../../../models/feed/findDefaultFeeds");
 const mockDbResponse = require("../../../utils/for-tests/mock-db-response");
 const buildResponseFromSchema = require("../../../utils/for-tests/build-response-from-schema");
-const jwt = require("../../../utils/jwt");
+const login = require("../../../utils/for-tests/login");
 
 describe("/GET feeds test suite", () => {
   describe("/feeds", () => {
@@ -45,14 +45,11 @@ describe("/GET feeds test suite", () => {
 
       findDefaultFeeds.execute = mockDbResponse(schema, [response]);
 
-      const token = jwt.generate({ id: "hi", email: "hello" });
+      const requestWithLogin = login(supertest(app).get("/feeds/me"));
 
-      return supertest(app)
-        .get("/feeds/me")
-        .set("Authorization", `Bearer ${token}`)
-        .then(({ body }) => {
-          expect(body[0]).toEqual(response);
-        });
+      return requestWithLogin.then(({ body }) => {
+        expect(body[0]).toEqual(response);
+      });
     });
   });
 });
