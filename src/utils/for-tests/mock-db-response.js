@@ -1,4 +1,4 @@
-const testSchema = require("./test-schema");
+const testSchema = require("./test-model-schema");
 
 const mockDbResponse = (schema, response) => {
   if (Array.isArray(response))

@@ -1,5 +1,5 @@
 const findUserByEmailAndPassword = require("../findUserByEmailAndPassword");
-const testSchema = require("../../../utils/for-tests/test-schema");
+const testSchema = require("../../../utils/for-tests/test-model-schema");
 
 describe("findUserByEmailAndPassword integration test suite", () => {
   it("Should validate the contract of findUserByEmailAndPassword", () => {

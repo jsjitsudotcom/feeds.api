@@ -1,5 +1,5 @@
 const findDefaultFeeds = require("../findDefaultFeeds");
-const testSchema = require("../../../utils/for-tests/test-schema");
+const testSchema = require("../../../utils/for-tests/test-model-schema");
 
 describe("findDefaultFeeds integration test suite", () => {
   it("Should validate the contract of findDefaultFeeds", () => {
