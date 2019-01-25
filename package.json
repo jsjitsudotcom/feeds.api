@@ -5,6 +5,9 @@
   "repository":
     "https://MarquesDev@bitbucket.org/MarquesDev/jsjitsu-server.git",
   "author": "Marques Kevin <marques.developpement@gmail.com>",
+  "engines": {
+    "node": ">=8"
+  },
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.1",
@@ -31,6 +34,8 @@
     "corp-semantic-release": "^6.4.0",
     "coveralls": "^3.0.0",
     "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.12.1",
+    "eslint-plugin-node": "^8.0.1",
     "ghooks": "^2.0.2",
     "husky": "^0.14.3",
     "jest": "^22.0.6",

@@ -1,11 +1,7 @@
 {
-    "plugins": ["node"],
-    "extends": ["eslint:recommended", "plugin:node/recommended"],
-    "rules": {
-      "node/exports-style": ["error", "module.exports"]
-    },
-    "parserOptions": {
-      "ecmaVersion": 2017
-    }
+  "plugins": ["node"],
+  "extends": ["eslint:recommended", "plugin:node/recommended"],
+  "rules": {
+    "node/exports-style": ["error", "module.exports"]
   }
-  
+}
