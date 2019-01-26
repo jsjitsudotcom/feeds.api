@@ -1,7 +1,7 @@
 const isSchemaAllowNull = require("./is-schema-allow-null");
 
 const testSchema = (schema, response) => {
-  const responseKeys = Object.keys(response);
+  const responseKeys = Object.keys(response.rawAttributes || response);
 
   responseKeys.forEach(key => {
     if (!schema[key])

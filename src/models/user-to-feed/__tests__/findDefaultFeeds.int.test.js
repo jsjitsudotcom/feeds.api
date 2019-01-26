@@ -1,8 +1,7 @@
-const insertUserToFeed = require("../insertUserToFeed");
-const testSchema = require("../../../utils/for-tests/test-model-schema");
+const InsertUserToFeed = require("../InsertUserToFeed");
 
-describe("insertUserToFeed integration test suite", () => {
+describe("InsertUserToFeed integration test suite", () => {
   it("Should have a schema", () => {
-    insertUserToFeed.getSchema();
+    InsertUserToFeed.getSchema();
   });
 });

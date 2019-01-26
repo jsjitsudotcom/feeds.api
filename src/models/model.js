@@ -1,9 +1,9 @@
-/**
- * @name Model
- * @param {Function} execute - The function who will execute the request to the service
- * @param {Function} getSchema - The function to get the schema of the response
- */
-module.exports = (execute, getSchema) => ({
-  execute,
-  getSchema
-});
+class Model {
+  constructor() {
+    if (!this.execute) throw new Error("You have to implement execute method");
+    if (!this.getSchema)
+      throw new Error("You have to implement getSchema method");
+  }
+}
+
+module.exports = Model;

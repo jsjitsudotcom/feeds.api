@@ -19,7 +19,12 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   feed.associate = function(models) {
-    // associations can be defined here
+    models.feed.belongsToMany(models.user, {
+      through: models.user_to_feed,
+      as: "users",
+      foreignKey: "feed_id",
+      otherKey: "user_id"
+    });
   };
 
   return feed;

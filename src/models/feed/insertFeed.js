@@ -1,27 +1,30 @@
 const db = require("../../../models");
-const Model = require("../model");
+const Model = require("../Model");
 
-const insertFeed = ({ name, rss_url, website_url }) => {
-  return db.feed
-    .create({
-      name,
-      rss_url,
-      website_url
-    })
-    .then(response => {
-      return response.get({ plain: true });
-    });
-};
+class InsertFeed extends Model {
+  /**
+   * @name execute
+   * @param {Object} options
+   * @param {string} options.name
+   * @param {string} options.rss_url
+   * @param {string} options.website_url
+   *
+   */
+  execute({ name, rss_url, website_url }) {
+    return db.feed
+      .create({
+        name,
+        rss_url,
+        website_url
+      })
+      .then(response => {
+        return response.get({ plain: true });
+      });
+  }
 
-const getSchema = () => db.feed.tableAttributes;
+  getSchema() {
+    return db.feed.tableAttributes;
+  }
+}
 
-/**
- * @typedef insertFeed
- * @param {Object} options
- * @param {string} options.name
- * @param {string} options.rss_url
- * @param {string} options.website_url
- *
- * @type { insertFeed }
- */
-module.exports = Model(insertFeed, getSchema);
+module.exports = new InsertFeed();

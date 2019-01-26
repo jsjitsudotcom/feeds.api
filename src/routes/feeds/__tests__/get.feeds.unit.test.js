@@ -1,6 +1,7 @@
 const supertest = require("supertest");
 const app = require("../../../app");
 const findDefaultFeeds = require("../../../models/feed/findDefaultFeeds");
+const findFeedsOfUser = require("../../../models/feed/findFeedsOfUser");
 const mockDbResponse = require("../../../utils/for-tests/mock-db-response");
 const buildResponseFromSchema = require("../../../utils/for-tests/build-response-from-schema");
 const login = require("../../../utils/for-tests/login");
@@ -35,15 +36,15 @@ describe("/GET feeds test suite", () => {
         });
     });
 
-    it("Should return the feeds of an user", () => {
-      const schema = findDefaultFeeds.getSchema();
+    it.only("Should return the feeds of an user", () => {
+      const schema = findFeedsOfUser.getSchema();
       const response = buildResponseFromSchema(schema, {
         id: 1,
         name: "echojs",
         is_default: false
       });
 
-      findDefaultFeeds.execute = mockDbResponse(schema, [response]);
+      findFeedsOfUser.execute = mockDbResponse(schema, [response]);
 
       const requestWithLogin = login(supertest(app).get("/feeds/me"));
 

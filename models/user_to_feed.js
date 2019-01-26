@@ -26,9 +26,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  user_to_feed.associate = function(models) {
-    // associations can be defined here
-  };
-
   return user_to_feed;
 };

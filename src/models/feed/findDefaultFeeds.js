@@ -1,19 +1,23 @@
 const db = require("../../../models");
-const Model = require("../model");
+const Model = require("../Model");
 
-const findDefaultFeeds = () => {
-  return db.feed
-    .findAll({
-      where: {
-        is_default: true
-      },
-      raw: true
-    })
-    .then(response => {
-      return response;
-    });
-};
+class FindDefaultFeeds extends Model {
+  execute() {
+    return db.feed
+      .findAll({
+        where: {
+          is_default: true
+        },
+        raw: true
+      })
+      .then(response => {
+        return response;
+      });
+  }
 
-const getSchema = () => db.feed.tableAttributes;
+  getSchema() {
+    return db.feed.tableAttributes;
+  }
+}
 
-module.exports = Model(findDefaultFeeds, getSchema);
+module.exports = new FindDefaultFeeds();
