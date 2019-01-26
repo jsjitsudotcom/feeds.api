@@ -1,7 +1,7 @@
 const supertest = require("supertest");
 const app = require("../../../app");
-const findDefaultFeeds = require("../../../models/feed/findDefaultFeeds");
-const findFeedsOfUser = require("../../../models/feed/findFeedsOfUser");
+const FindDefaultFeeds = require("../../../models/feed/FindDefaultFeeds");
+const FindFeedsOfUser = require("../../../models/feed/FindFeedsOfUser");
 const mockDbResponse = require("../../../utils/for-tests/mock-db-response");
 const buildResponseFromSchema = require("../../../utils/for-tests/build-response-from-schema");
 const login = require("../../../utils/for-tests/login");
@@ -9,14 +9,14 @@ const login = require("../../../utils/for-tests/login");
 describe("/GET feeds test suite", () => {
   describe("/feeds", () => {
     it("Should return the default feeds if the user is not connected", () => {
-      const schema = findDefaultFeeds.getSchema();
+      const schema = FindDefaultFeeds.getSchema();
       const response = buildResponseFromSchema(schema, {
         id: 1,
         name: "echojs",
         is_default: true
       });
 
-      findDefaultFeeds.execute = mockDbResponse(schema, [response]);
+      FindDefaultFeeds.execute = mockDbResponse(schema, [response]);
 
       return supertest(app)
         .get("/feeds")
@@ -36,15 +36,15 @@ describe("/GET feeds test suite", () => {
         });
     });
 
-    it.only("Should return the feeds of an user", () => {
-      const schema = findFeedsOfUser.getSchema();
+    it("Should return the feeds of an user", () => {
+      const schema = FindFeedsOfUser.getSchema();
       const response = buildResponseFromSchema(schema, {
         id: 1,
         name: "echojs",
         is_default: false
       });
 
-      findFeedsOfUser.execute = mockDbResponse(schema, [response]);
+      FindFeedsOfUser.execute = mockDbResponse(schema, [response]);
 
       const requestWithLogin = login(supertest(app).get("/feeds/me"));
 

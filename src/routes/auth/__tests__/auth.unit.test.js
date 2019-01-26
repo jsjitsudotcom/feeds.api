@@ -1,8 +1,7 @@
 const supertest = require("supertest");
 const app = require("../../../app");
-const findUserByEmailAndPassword = require("../../../models/user/findUserByEmailAndPassword");
+const FindUserByEmailAndPassword = require("../../../models/user/FindUserByEmailAndPassword");
 const mockDbResponse = require("../../../utils/for-tests/mock-db-response");
-const jwt = require("../../../utils/jwt");
 
 describe("/auth test suite", () => {
   it("Should return an error if the email is not provided", () => {
@@ -27,9 +26,9 @@ describe("/auth test suite", () => {
     const id = "23456";
     const email = "jsjitsu@gmail.com";
     const password = "supersecret";
-    const schema = findUserByEmailAndPassword.getSchema();
+    const schema = FindUserByEmailAndPassword.getSchema();
 
-    findUserByEmailAndPassword.execute = mockDbResponse(schema, {
+    FindUserByEmailAndPassword.execute = mockDbResponse(schema, {
       id,
       email,
       password
@@ -46,9 +45,9 @@ describe("/auth test suite", () => {
   it("Should return an error if the credentials are incorrect", () => {
     const email = "jsjitsu@gmail.com";
     const password = "supersecret";
-    const schema = findUserByEmailAndPassword.getSchema();
+    const schema = FindUserByEmailAndPassword.getSchema();
 
-    findUserByEmailAndPassword.execute = mockDbResponse(schema, null);
+    FindUserByEmailAndPassword.execute = mockDbResponse(schema, null);
 
     return supertest(app)
       .post("/auth")
