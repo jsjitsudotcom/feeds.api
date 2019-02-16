@@ -55,20 +55,6 @@ add_git_user: &add_git_user
 #       - run: yarn test:ci
 #       - run: yarn coveralls
   
-
-#   release:
-#     docker: *docker
-#     working_directory: *working-directory
-#     steps:
-#       - checkout
-#       - restore_cache: *restore_cache
-#       - run: *install
-#       - save_cache: *save_cache
-#       - run: *add_git_user
-#       - run: yarn test:ci
-#       - run: yarn coveralls
-#       - run: yarn release
-  
 version: 2
 jobs:
   build:
@@ -81,16 +67,30 @@ jobs:
       - save_cache: *save_cache
       - run: yarn test:ci
 
+  release:
+    docker: *docker
+    working_directory: *working-directory
+    steps:
+      - checkout
+      - restore_cache: *restore_cache
+      - run: *install
+      - save_cache: *save_cache
+      - run: *add_git_user
+      - run: yarn test:ci
+      - run: yarn coveralls
+      - run: yarn release
+
 workflows:
   version: 2
-  build-deploy:
+  test-and-release:
     jobs:
       - build:
           filters:
             branches:
               ignore: 
                 - master
-      # - release:
-      #     filters:
-      #       branches:
-      #         only: master
+      - release:
+          filters:
+            branches:
+              only: 
+                - master
