@@ -1,6 +1,6 @@
 const supertest = require("supertest");
 const app = require("../../../app");
-const FindUserByEmailAndPassword = require("../../../models/user/FindUserByEmailAndPassword");
+const { FindUserByEmailAndPassword } = require("database");
 const mockDbResponse = require("../../../utils/for-tests/mock-db-response");
 
 describe("/auth test suite", () => {

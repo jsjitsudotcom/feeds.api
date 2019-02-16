@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const FindDefaultFeeds = require("../../models/feed/FindDefaultFeeds");
-const FindFeedsOfUser = require("../../models/feed/FindFeedsOfUser");
+const { FindDefaultFeeds, FindFeedsOfUser } = require("database");
 const jwt = require("../../utils/jwt");
 
 router.get("/", (req, res, next) => {

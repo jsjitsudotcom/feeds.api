@@ -1,6 +1,7 @@
 const supertest = require("supertest");
 const app = require("../../../app");
-const insertFeed = require("../../../models/feed/insertFeed");
+const { InsertFeed } = require("database");
+
 const fetchFeed = require("../../../api/rss/fetchFeed");
 const mockDbResponse = require("../../../utils/for-tests/mock-db-response");
 const mockFailResponse = require("../../../utils/for-tests/mock-fail-response");
@@ -47,7 +48,7 @@ describe("/POST feeds test suite", () => {
       const rss_url = "http://medium.com/feeds";
       const website_url = "http://medium.com";
 
-      const insertFeedSchema = insertFeed.getSchema();
+      const insertFeedSchema = InsertFeed.getSchema();
 
       const responseInsertFeed = buildResponseFromSchema(insertFeedSchema, {
         id: 1,
@@ -57,7 +58,7 @@ describe("/POST feeds test suite", () => {
         is_default: false
       });
 
-      insertFeed.execute = mockDbResponse(insertFeedSchema, responseInsertFeed);
+      InsertFeed.execute = mockDbResponse(insertFeedSchema, responseInsertFeed);
       fetchFeed.execute = mockDbResponse(null, null);
 
       return supertest(app)

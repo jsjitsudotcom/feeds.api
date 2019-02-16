@@ -1,7 +1,6 @@
 const supertest = require("supertest");
 const app = require("../../../app");
-const FindDefaultFeeds = require("../../../models/feed/FindDefaultFeeds");
-const FindFeedsOfUser = require("../../../models/feed/FindFeedsOfUser");
+const { FindDefaultFeeds, FindFeedsOfUser } = require("database");
 const mockDbResponse = require("../../../utils/for-tests/mock-db-response");
 const buildResponseFromSchema = require("../../../utils/for-tests/build-response-from-schema");
 const login = require("../../../utils/for-tests/login");

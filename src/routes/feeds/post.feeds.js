@@ -4,7 +4,7 @@ const fetchFeed = require("../../api/rss/fetchFeed");
 const Joi = require("joi");
 
 const router = express.Router();
-const insertFeed = require("../../models/feed/insertFeed");
+const { InsertFeed } = require("database");
 
 const bodySchema = Joi.object({
   rss_url: Joi.string()
@@ -42,7 +42,7 @@ router.post("/", hasGoodBody, isValidRssFeed, (req, res) => {
   const { rss_url } = req.body;
   const website_url = getBaseUrl(rss_url);
 
-  return insertFeed.execute({ rss_url, website_url }).then(feed => {
+  return InsertFeed.execute({ rss_url, website_url }).then(feed => {
     res.json(feed);
   });
 });

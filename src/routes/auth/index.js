@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const findUserByEmailAndPassword = require("../../models/user/findUserByEmailAndPassword");
+const { FindUserByEmailAndPassword } = require("database");
 const jwt = require("../../utils/jwt");
 
 const hasEmail = (req, res, next) => {
@@ -26,8 +26,7 @@ const hasPassword = (req, res, next) => {
 router.post("/", hasEmail, hasPassword, (req, res, next) => {
   const { email, password } = req.body;
 
-  return findUserByEmailAndPassword
-    .execute({ email, password })
+  return FindUserByEmailAndPassword.execute({ email, password })
     .then(user => {
       if (!user)
         return res
