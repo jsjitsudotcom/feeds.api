@@ -78,8 +78,6 @@ workflows:
             branches:
               ignores: master
       - release:
-          requires:
-            - build
           filters:
             branches:
               only: master
