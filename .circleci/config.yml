@@ -16,7 +16,7 @@ save_cache: &save_cache
 install: &install yarn install
 
 docker: &docker
-  - image: circleci/node:latest
+  - image: circleci/node:8
 
 working_directory: &working-directory ~/repo
 
