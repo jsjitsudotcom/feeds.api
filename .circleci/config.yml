@@ -81,14 +81,14 @@ jobs:
       - save_cache: *save_cache
       - run: yarn test:ci
 
-workflows:
-  version: 2
-  build-deploy:
-    jobs:
-      - build:
-          filters:
-            branches:
-              ignores: master
+# workflows:
+#   version: 2
+#   build-deploy:
+#     jobs:
+#       - build:
+#           filters:
+#             branches:
+#               ignores: master
       # - release:
       #     filters:
       #       branches:
