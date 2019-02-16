@@ -1,3 +1,13 @@
+<a name="1.4.0"></a>
+# [1.4.0](https://bitbucket.org/MarquesDev/jsjitsu-server/compare/v1.3.0...v1.4.0) (2019-02-16)
+
+
+### Bug Fixes
+
+* use node 8 in CI ([92b58cf](https://bitbucket.org/MarquesDev/jsjitsu-server/commits/92b58cf))
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://bitbucket.org/MarquesDev/jsjitsu-server/compare/v1.2.1...v1.3.0) (2018-03-13)
 
