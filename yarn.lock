@@ -1405,8 +1405,9 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-database@../database:
+"database@https://github.com/jsjitsudotcom/feeds.database":
   version "1.0.0"
+  resolved "https://github.com/jsjitsudotcom/feeds.database#9719c4c17e8e429dfc3de706c2a548f333bbd082"
   dependencies:
     pg "^7.8.0"
     pg-hstore "^2.3.2"
