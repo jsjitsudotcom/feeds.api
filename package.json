@@ -1,5 +1,5 @@
 {
-  "name": "jsjitsu-lambda",
+  "name": "jsjitsu.feeds.api",
   "version": "1.3.0",
   "main": "index.js",
   "repository":
