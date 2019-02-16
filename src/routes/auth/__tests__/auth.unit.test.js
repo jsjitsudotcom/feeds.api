@@ -1,7 +1,7 @@
 const supertest = require("supertest");
 const app = require("../../../app");
 const { FindUserByEmailAndPassword } = require("database");
-const mockDbResponse = require("../../../utils/for-tests/mock-db-response");
+const { mockDbResponse } = require("database/utils");
 
 describe("/auth test suite", () => {
   it("Should return an error if the email is not provided", () => {

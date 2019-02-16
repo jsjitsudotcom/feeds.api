@@ -3,9 +3,11 @@ const app = require("../../../app");
 const { InsertFeed } = require("database");
 
 const fetchFeed = require("../../../api/rss/fetchFeed");
-const mockDbResponse = require("../../../utils/for-tests/mock-db-response");
-const mockFailResponse = require("../../../utils/for-tests/mock-fail-response");
-const buildResponseFromSchema = require("../../../utils/for-tests/build-response-from-schema");
+const {
+  mockDbResponse,
+  mockFailResponse,
+  buildResponseFromSchema
+} = require("database/utils");
 
 describe("/POST feeds test suite", () => {
   describe("/feeds", () => {

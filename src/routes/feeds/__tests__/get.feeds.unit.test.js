@@ -1,8 +1,7 @@
 const supertest = require("supertest");
 const app = require("../../../app");
 const { FindDefaultFeeds, FindFeedsOfUser } = require("database");
-const mockDbResponse = require("../../../utils/for-tests/mock-db-response");
-const buildResponseFromSchema = require("../../../utils/for-tests/build-response-from-schema");
+const { mockDbResponse, buildResponseFromSchema } = require("database/utils");
 const login = require("../../../utils/for-tests/login");
 
 describe("/GET feeds test suite", () => {
