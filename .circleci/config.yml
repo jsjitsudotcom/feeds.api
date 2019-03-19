@@ -54,6 +54,7 @@ jobs:
       - run: yarn test:ci
       - run: yarn coveralls
       - run: yarn release
+      - run: yarn deploy
 
 workflows:
   version: 2

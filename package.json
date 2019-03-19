@@ -2,7 +2,7 @@
   "name": "jsjitsu.feeds.api",
   "version": "1.4.1",
   "main": "index.js",
-  "repository": "https://MarquesDev@bitbucket.org/MarquesDev/jsjitsu-server.git",
+  "repository": "https://github.com/jsjitsudotcom/feeds.api.git",
   "author": "Marques Kevin <marques.developpement@gmail.com>",
   "engines": {
     "node": ">=8.12.0"
@@ -78,9 +78,6 @@
     "ghooks": {}
   },
   "lint-staged": {
-    "*.{js,jsx,json,css,scss}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,jsx,json,css,scss}": ["prettier --write", "git add"]
   }
 }
