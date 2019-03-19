@@ -2,8 +2,7 @@
   "name": "jsjitsu.feeds.api",
   "version": "1.4.0",
   "main": "index.js",
-  "repository":
-    "https://MarquesDev@bitbucket.org/MarquesDev/jsjitsu-server.git",
+  "repository": "https://github.com/jsjitsudotcom/feeds.api.git",
   "author": "Marques Kevin <marques.developpement@gmail.com>",
   "engines": {
     "node": ">=8.12.0"
@@ -52,6 +51,7 @@
     "prettier": "^1.10.2",
     "sequelize-cli": "^5.4.0",
     "sequelize-mock": "^0.10.2",
+    "serverless": "^1.39.1",
     "serverless-offline": "^3.16.0",
     "sinon": "^4.1.5",
     "supertest": "^3.4.2",

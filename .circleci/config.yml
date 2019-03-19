@@ -51,6 +51,7 @@ jobs:
       - save_cache: *save_cache
       - run: *install_aws_cli
       - aws-cli/configure
+      - run: yarn deploy
       # - run: yarn test:ci
 
 

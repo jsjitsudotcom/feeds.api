@@ -1,3 +1,9 @@
 const { version } = require("./../package.json");
 
-console.log(`v${version.split("")[0]}`);
+const replaceDotsByHyphen = version.replace(/\./gi, "-");
+const splitVersion = replaceDotsByHyphen.split("");
+const getMajorAndMinorVersion = splitVersion
+  .slice(0, splitVersion.length - 2)
+  .join("");
+
+console.log(`v${getMajorAndMinorVersion}`);
