@@ -1,4 +1,3 @@
 module.exports = {
-  SENTRY_DSN:
-    "https://733f2127681f4e82bd39d45b1889cf24:384f2885416e44eeb8c9ef6ee75af08e@sentry.io/278439"
+  SENTRY_DSN: "https://c7e48ed65077404ba3a512e367a0f866@sentry.io/1411560"
 };

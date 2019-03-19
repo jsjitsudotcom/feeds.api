@@ -30,7 +30,11 @@ add_git_user: &add_git_user
 #################################
 #      CIRCLE CI WORKFLOW       #
 #################################
-version: 2
+version: 2.1
+
+orbs:
+  aws-cli: circleci/aws-cli@0.1.11
+
 jobs:
   build:
     docker: *docker
@@ -40,7 +44,9 @@ jobs:
       - restore_cache: *restore_cache
       - run: *install
       - save_cache: *save_cache
-      - run: yarn test:ci
+      - aws-cli/install
+      - aws-cli/configure
+      # - run: yarn test:ci
 
   release:
     docker: *docker

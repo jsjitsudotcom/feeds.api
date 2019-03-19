@@ -10,6 +10,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@sentry/node": "^4.6.4",
     "bluebird": "^3.5.1",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
@@ -70,7 +71,9 @@
     "commit": "git-cz",
     "coveralls": "cat ./coverage/lcov.info | npx coveralls",
     "do:release": "corp-semantic-release",
-    "release": "npm run do:release"
+    "release": "npm run do:release",
+    "db:up": "cd node_modules/database && docker-compose up",
+    "db": "cd node_modules/database && sequelize"
   },
   "config": {
     "commitizen": {
