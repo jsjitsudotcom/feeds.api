@@ -20,6 +20,11 @@ docker: &docker
 
 working_directory: &working-directory ~/repo
 
+install_aws_cli: &install_aws_cli
+  command: |
+    sudo apt update   
+    sudo apt -y -qq install awscli
+
 add_git_user: &add_git_user
   command: |
       git config --global user.email "marques.developpement@gmail.com"
@@ -44,7 +49,7 @@ jobs:
       - restore_cache: *restore_cache
       - run: *install
       - save_cache: *save_cache
-      - aws-cli/install
+      - run: *install_aws_cli
       - aws-cli/configure
       # - run: yarn test:ci
 
