@@ -20,17 +20,26 @@ docker: &docker
 
 working_directory: &working-directory ~/repo
 
+install_aws_cli: &install_aws_cli
+  command: |
+    sudo apt update   
+    sudo apt -y -qq install awscli
+
 add_git_user: &add_git_user
   command: |
-      git config --global user.email "marques.developpement@gmail.com"
-      git config --global user.name "Marques Kevin"
-      git config --global push.default simple
-
+    git config --global user.email "marques.developpement@gmail.com"
+    git config --global user.name "Marques Kevin"
+    git config --global push.default simple
 
 #################################
 #      CIRCLE CI WORKFLOW       #
 #################################
-version: 2
+
+version: 2.1
+
+orbs:
+  aws-cli: circleci/aws-cli@0.1.11
+
 jobs:
   build:
     docker: *docker
@@ -54,6 +63,9 @@ jobs:
       - run: yarn test:ci
       - run: yarn coveralls
       - run: yarn release
+      - run: *install_aws_cli
+      - aws-cli/configure
+      - run: yarn deploy
 
 workflows:
   version: 2
@@ -62,10 +74,10 @@ workflows:
       - build:
           filters:
             branches:
-              ignore: 
+              ignore:
                 - master
       - release:
           filters:
             branches:
-              only: 
+              only:
                 - master

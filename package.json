@@ -1,15 +1,15 @@
 {
   "name": "jsjitsu.feeds.api",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "main": "index.js",
-  "repository":
-    "https://MarquesDev@bitbucket.org/MarquesDev/jsjitsu-server.git",
+  "repository": "https://github.com/jsjitsudotcom/feeds.api.git",
   "author": "Marques Kevin <marques.developpement@gmail.com>",
   "engines": {
     "node": ">=8.12.0"
   },
   "license": "MIT",
   "dependencies": {
+    "@sentry/node": "^4.6.4",
     "bluebird": "^3.5.1",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
@@ -29,7 +29,8 @@
     "request": "^2.83.0",
     "rss-parser": "^2.12.0",
     "sequelize": "^4.42.0",
-    "serverless-http": "^1.5.3"
+    "serverless-http": "^1.5.3",
+    "url-parse": "^1.4.4"
   },
   "devDependencies": {
     "commitizen": "^2.9.6",
@@ -51,10 +52,10 @@
     "prettier": "^1.10.2",
     "sequelize-cli": "^5.4.0",
     "sequelize-mock": "^0.10.2",
+    "serverless": "^1.39.1",
     "serverless-offline": "^3.16.0",
     "sinon": "^4.1.5",
-    "supertest": "^3.4.2",
-    "url-parse": "^1.4.4"
+    "supertest": "^3.4.2"
   },
   "scripts": {
     "preinstall": "node scripts/preinstall.js",
@@ -65,12 +66,14 @@
     "debug": "DEBUG=app:* PORT=7654 nodemon src/bin/www",
     "debug:production": "NODE_ENV=production npm run debug",
     "start": "sls offline --port 7654",
-    "deploy": "sls deploy --stage $(node scripts/get-version)",
+    "deploy": "sls deploy --stage production",
     "precommit": "lint-staged",
     "commit": "git-cz",
     "coveralls": "cat ./coverage/lcov.info | npx coveralls",
     "do:release": "corp-semantic-release",
-    "release": "npm run do:release"
+    "release": "npm run do:release",
+    "db:up": "cd node_modules/database && docker-compose up",
+    "db": "cd node_modules/database && sequelize"
   },
   "config": {
     "commitizen": {
@@ -79,6 +82,9 @@
     "ghooks": {}
   },
   "lint-staged": {
-    "*.{js,jsx,json,css,scss}": ["prettier --write", "git add"]
+    "*.{js,jsx,json,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
