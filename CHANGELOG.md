@@ -1,3 +1,13 @@
+<a name="1.4.1"></a>
+## [1.4.1](https://bitbucket.org/MarquesDev/jsjitsu-server/compare/v1.4.0...v1.4.1) (2019-02-16)
+
+
+### Bug Fixes
+
+* change release command ([d1ef34d](https://bitbucket.org/MarquesDev/jsjitsu-server/commits/d1ef34d))
+
+
+
 <a name="1.4.0"></a>
 # [1.4.0](https://bitbucket.org/MarquesDev/jsjitsu-server/compare/v1.3.0...v1.4.0) (2019-02-16)
 

@@ -1,6 +1,6 @@
 {
   "name": "jsjitsu.feeds.api",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "main": "index.js",
   "repository": "https://github.com/jsjitsudotcom/feeds.api.git",
   "author": "Marques Kevin <marques.developpement@gmail.com>",
@@ -82,6 +82,9 @@
     "ghooks": {}
   },
   "lint-staged": {
-    "*.{js,jsx,json,css,scss}": ["prettier --write", "git add"]
+    "*.{js,jsx,json,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
