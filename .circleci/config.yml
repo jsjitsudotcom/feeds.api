@@ -27,10 +27,9 @@ install_aws_cli: &install_aws_cli
 
 add_git_user: &add_git_user
   command: |
-      git config --global user.email "marques.developpement@gmail.com"
-      git config --global user.name "Marques Kevin"
-      git config --global push.default simple
-
+    git config --global user.email "marques.developpement@gmail.com"
+    git config --global user.name "Marques Kevin"
+    git config --global push.default simple
 
 #################################
 #      CIRCLE CI WORKFLOW       #
@@ -49,11 +48,7 @@ jobs:
       - restore_cache: *restore_cache
       - run: *install
       - save_cache: *save_cache
-      - run: *install_aws_cli
-      - aws-cli/configure
-      - run: yarn deploy
-      # - run: yarn test:ci
-
+      - run: yarn test:ci
 
   release:
     docker: *docker
@@ -67,6 +62,9 @@ jobs:
       - run: yarn test:ci
       - run: yarn coveralls
       - run: yarn release
+      - run: *install_aws_cli
+      - aws-cli/configure
+      - run: yarn deploy
 
 workflows:
   version: 2
@@ -75,10 +73,10 @@ workflows:
       - build:
           filters:
             branches:
-              ignore: 
+              ignore:
                 - master
       - release:
           filters:
             branches:
-              only: 
+              only:
                 - master
