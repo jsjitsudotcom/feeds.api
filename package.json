@@ -30,7 +30,8 @@
     "rss-parser": "^2.12.0",
     "sequelize": "^4.42.0",
     "serverless-http": "^1.5.3",
-    "url-parse": "^1.4.4"
+    "url-parse": "^1.4.4",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "commitizen": "^2.9.6",
@@ -73,7 +74,9 @@
     "do:release": "corp-semantic-release",
     "release": "npm run do:release",
     "db:up": "cd node_modules/database && docker-compose up",
-    "db": "cd node_modules/database && sequelize"
+    "db": "cd node_modules/database && sequelize",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "config": {
     "commitizen": {
@@ -86,5 +89,6 @@
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "snyk": true
 }
