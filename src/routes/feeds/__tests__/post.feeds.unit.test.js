@@ -1,13 +1,13 @@
 const supertest = require("supertest");
 const app = require("../../../app");
-const { InsertFeed } = require("database");
+const { InsertFeed } = require("../../../models");
 
 const fetchFeed = require("../../../api/rss/fetchFeed");
 const {
   mockDbResponse,
   mockFailResponse,
   buildResponseFromSchema
-} = require("database/utils");
+} = require("../../../utils/for-tests");
 
 describe("/POST feeds test suite", () => {
   describe("/feeds", () => {

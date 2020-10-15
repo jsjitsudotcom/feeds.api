@@ -17,6 +17,9 @@ install: &install yarn install
 
 docker: &docker
   - image: circleci/node:8
+  - image: postgres:10
+    environment:
+      POSTGRES_PASSWORD: root
 
 working_directory: &working-directory ~/repo
 
@@ -49,6 +52,8 @@ jobs:
       - restore_cache: *restore_cache
       - run: *install
       - save_cache: *save_cache
+      - run: yarn migrate
+      - run: yarn seed
       - run: yarn test:ci
 
   release:
@@ -60,9 +65,11 @@ jobs:
       - run: *install
       - save_cache: *save_cache
       - run: *add_git_user
+      - run: yarn migrate
+      - run: yarn seed
       - run: yarn test:ci
-      - run: yarn coveralls
       - run: yarn release
+      - run: yarn migrate:production
       - run: *install_aws_cli
       - aws-cli/configure
       - run: yarn deploy

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { FindUserByEmailAndPassword } = require("database");
+const { FindUserByEmailAndPassword } = require("../../models");
 const jwt = require("../../utils/jwt");
 
 const hasEmail = (req, res, next) => {

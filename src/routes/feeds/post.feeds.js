@@ -4,7 +4,7 @@ const fetchFeed = require("../../api/rss/fetchFeed");
 const Joi = require("joi");
 
 const router = express.Router();
-const { InsertFeed } = require("database");
+const { InsertFeed } = require("../../models");
 
 const bodySchema = Joi.object({
   rss_url: Joi.string()
